@@ -1,0 +1,2 @@
+Ensimmäiseksi päivitetään paketit komennolla sudo apt-get update
+Tämän jälkeen voidaankin asentaa puppet komennolla sudo apt-get install puppet
