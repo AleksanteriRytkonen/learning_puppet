@@ -15,6 +15,6 @@ class heimaailma {
 }
 
 tallennetaan ja suljetaan tiedosto komennoilla ctrl+o ctrl+x
-Suoritetaan kuvassa näkyvä komento ja olet valmis, ensimäisellä kerralla se 
+Suoritetaan seuraava komento puppet kansiossa: puppet apply --modulepath modules/ -e 'class {"heimaailma":}'
 luo tiedoston, tässä tapauksessa /tmp/ kansioon, josta voit sitä sitten tutkia.
 
