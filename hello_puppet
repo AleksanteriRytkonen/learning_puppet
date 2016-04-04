@@ -18,3 +18,10 @@ tallennetaan ja suljetaan tiedosto komennoilla ctrl+o ctrl+x
 Suoritetaan seuraava komento puppet kansiossa: puppet apply --modulepath modules/ -e 'class {"heimaailma":}'
 luo tiedoston, tässä tapauksessa /tmp/ kansioon, josta voit sitä sitten tutkia.
 
+
+Henkilökohtainen note:
+Selvitä miten laittaa kuvia githubiin.
+
+-Aleksanteri Rytkönen
+Lähteet:
+http://terokarvinen.com/2013/hello-puppet-revisited-%E2%80%93-on-ubuntu-12-04-lts
