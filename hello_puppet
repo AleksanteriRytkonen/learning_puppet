@@ -1,2 +1,20 @@
 Ensimmäiseksi päivitetään paketit komennolla sudo apt-get update
 Tämän jälkeen voidaankin asentaa puppet komennolla sudo apt-get install puppet
+Sitten tehdään puppetille oma kansio mihin tulee kaikki moduulit, luodaan
+se komennolla mkdir puppet, siirrytään kyseiseen kansioon cd puppet
+Sitten ajetaan seuraava komento joka luo tarvittavat kansiot ja alikansiot 
+heimaailma moduulille komennolla mkdir -p modules/heimaailma/manifests/
+Siirrytään manifests cansioon ja luodaan init tiedosto komennolla nano/init.pp
+luodaan luokka ja sen täytyy olla saman niminen kuin moduuli eli heimaailma,
+tehdään luokasta seuraavan näköinen 
+
+class heimaailma {
+        file { '/tmp/heimaailmaModule':
+            content => "Hei maailma! Ensimmäinen puppet moduulini.\n"
+        }
+}
+
+tallennetaan ja suljetaan tiedosto komennoilla ctrl+o ctrl+x
+Suoritetaan kuvassa näkyvä komento ja olet valmis, ensimäisellä kerralla se 
+luo tiedoston, tässä tapauksessa /tmp/ kansioon, josta voit sitä sitten tutkia.
+
