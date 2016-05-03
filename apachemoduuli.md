@@ -28,4 +28,5 @@ vakio index.html:n sisällön tekstillä Jeps!
 
 ##Lähteet
 [terokarvinen.com](http://terokarvinen.com/2016/aikataulu-%E2%80%93-linuxin-keskitetty-hallinta-ict4tn011-9-loppukevat-2016#comments)
+
 [puppetcookbook](http://www.puppetcookbook.com/)
