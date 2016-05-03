@@ -20,4 +20,8 @@ class apache {
         }
 }
 ```
+Tämän jälkeen voidaankin kyseisessä kansiossa kirjoittaa
+`puppet apply -e 'class{"apache": }'`
+Minkä jälkeen apache asentuu jos se ei ole jo asentunut, käynnistyy ja korvaa
+vakio index.html:n sisällön tekstillä Jeps!
  
