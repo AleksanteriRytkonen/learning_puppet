@@ -5,4 +5,19 @@ apache ja manifests kansiot komennolla:
 `mkdir -p apache/manifests/`
 Sirrytään kyseiseen kansioon ja luodaan init.pp tiedosto
 komennolla `sudoedit init.pp`, jonka sisälle tulee seuraava
-sisältö. 
+sisältö:
+```
+class apache {
+        package {"apache2":
+                ensure => "installed",
+        }
+        file { "/var/www/html/index.html":
+                content => "Jeps!\n",
+        }
+        service {"apache2":
+                ensure => "running",
+                enable => "true",
+        }
+}
+```
+ 
