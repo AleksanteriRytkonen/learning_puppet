@@ -10,4 +10,8 @@ class nginx {
 		ensure => running,
 		require => Package['nginx'],
 	}
+	file { '/etc/nginx/sites-enabled/default':
+		source => 'puppet:///modules/nginx/kissakuvat.conf',
+		notify => Service['nginx'],
+	}
 }
