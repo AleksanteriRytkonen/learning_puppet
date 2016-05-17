@@ -1,5 +1,5 @@
 class munin {
-	package { [Ã'munin', 'munin-node']:
+	package { ['munin', 'munin-node']:
 		ensure => installed,
 	}
-Â}
+}
