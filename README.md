@@ -1,3 +1,2 @@
-# puppet
-learning puppet
-volume 1
+#puppet
+## learning how to make puppet modules.
