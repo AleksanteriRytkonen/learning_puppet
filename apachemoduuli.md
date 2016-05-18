@@ -42,7 +42,7 @@ Muokkasin myös `/etc/hosts` tiedostoa ja lisäsin sinne seuraavanlaisen rivin
 Tämän jälkeen korjasin vielä templatessa olleen typon (yksi '>' merkki puuttui) ja alkoi homma pelittää.
 ![ScreenShot](/images/apachevhost.png)
 
-** Dokumenttia päivitetty 18.5.2016 **
+**Dokumenttia päivitetty 18.5.2016**
 
 ##Lähteet
 [terokarvinen.com](http://terokarvinen.com/2016/aikataulu-%E2%80%93-linuxin-keskitetty-hallinta-ict4tn011-9-loppukevat-2016#comments)
