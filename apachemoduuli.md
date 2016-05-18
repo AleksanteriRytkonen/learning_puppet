@@ -1,3 +1,6 @@
+
+
+
 **Tehdään yksinkertainen moduuli joka asentaa apachen ja
 korvaa apachen vakio index.html:n sisällön**.
 aloitetaan menemällä `cd /etc/puppet/modules` ja luodaan sinne vielä
@@ -26,6 +29,11 @@ Minkä jälkeen apache asentuu jos se ei ole jo asentunut, käynnistyy ja korvaa
 vakio index.html:n sisällön tekstillä Jeps!
 ![ScreenShot](/images/apassiPuppet.png)
 
+##Edit:
+Lisäsin defined typellä virtualhostin apacheen joka löytyy seuraavasta linkistä: [vhostmoduuli](https://github.com/AleksanteriRytkonen/learning_puppet/tree/master/modules/apache)
+Muokkasin myös `/etc/hosts` tiedostoa ja lisäsin sinne seuraavanlaisen rivin
+`10.0.2.15      allu.aleksanterirytkonen.com` ip osoitteena tietysti koneen oma ip.
+Tämän jälkeen korjasin vielä templatessa olleen typon (yksi '>' merkki puuttui) ja alkoi homma pelittää.
 ![ScreenShot](/images/apachevhost.png)
 
 ##Lähteet
