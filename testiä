@@ -1,0 +1,67 @@
+site.pp
+node default {
+	$user = 'allu'
+	class {'apache':
+		port => '80',
+		user => $user,
+		docroot => "/home/$user/public_html",
+	}
+}
+init.pp
+class apache($port, $user, $docroot) {
+        package {"apache2":
+                ensure => "installed",
+        }
+        service {"apache2":
+                ensure => "running",
+                enable => "true",
+		require => Package['apache2'],
+        }
+	apache::vhost { 'kotisivu':
+		port => $port,
+		docroot => $docroot,
+		user => $user,
+		require => Package['apache2'],
+	}
+}
+vhost.pp
+define apache::vhost ($port, $user, $docroot) {
+	file { '/var/www/html/index.html':
+		ensure => 'absent',
+		notify => Exec['dissite'],
+	}
+	exec { 'dissite':
+		path => [ '/bin', '/usr/bin', '/usr/sbin' ],
+		command => "a2dissite 000-default.conf",
+		refreshonly => true
+	}
+	file { "/home/$user/public_html":
+		ensure => 'directory',
+		owner => "$user",
+		mode => '0775',
+	}
+	file { "/etc/apache2/sites-available/$user.conf":
+		content => template('apache/vhost.conf.erb'),
+		notify => Exec['ensite'],
+	}
+	file { "/home/$user/public_html/index.html":
+		ensure => 'file',
+		content => 'Hei maailma\n',
+	}
+	exec { 'ensite':
+                path => [ '/bin', '/usr/bin', '/usr/sbin' ],
+                command => "a2ensite $user.conf",
+                refreshonly => true,
+                notify => Service['apache2'],
+        }
+}
+vhost.conf.erb
+<VirtualHost *:<%= @port %>>
+        ServerAdmin webmaster@localhost
+        DocumentRoot <%= @docroot %>
+	ServerName <%= @user %>.aleksanterirytkonen.com
+        <Directory <%= @docroot %>
+                Require all granted
+        </Directory>
+</VirtualHost>
+
