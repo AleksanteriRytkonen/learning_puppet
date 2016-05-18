@@ -1,8 +1,8 @@
-### Käytetty laitteisto
+** Käytetty laitteisto **
 ``` 
 Käyttöjärjestelmä: Xubuntu 16.04 LTS 64bit
 cpu: amd fx-8120
-näytönohjain nvidia: geforce gtx 970
+näytönohjain: nvidia geforce gtx 970
 DDR3: 16GB
 ```
 
@@ -41,6 +41,8 @@ Muokkasin myös `/etc/hosts` tiedostoa ja lisäsin sinne seuraavanlaisen rivin
 `10.0.2.15      allu.aleksanterirytkonen.com` ip osoitteena tietysti koneen oma ip.
 Tämän jälkeen korjasin vielä templatessa olleen typon (yksi '>' merkki puuttui) ja alkoi homma pelittää.
 ![ScreenShot](/images/apachevhost.png)
+
+** Dokumenttia päivitetty 18.5.2016 **
 
 ##Lähteet
 [terokarvinen.com](http://terokarvinen.com/2016/aikataulu-%E2%80%93-linuxin-keskitetty-hallinta-ict4tn011-9-loppukevat-2016#comments)
