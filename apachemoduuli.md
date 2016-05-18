@@ -1,4 +1,4 @@
-** Käytetty laitteisto **
+**Käytetty laitteisto**
 ``` 
 Käyttöjärjestelmä: Xubuntu 16.04 LTS 64bit
 cpu: amd fx-8120
