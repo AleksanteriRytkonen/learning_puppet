@@ -1,0 +1,8 @@
+<VirtualHost *:<%= port %>>
+	ServerAdmin webmaster@localhost
+	DocumentRoot <%= docroot %>
+	ServerName <%= @user %>.aleksanterirytkonen.com
+	<Directory <% docroot %>>
+		Require all granted
+	</Directory>
+</VirtualHost>
