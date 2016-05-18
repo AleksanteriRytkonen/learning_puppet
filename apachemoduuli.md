@@ -1,4 +1,10 @@
-
+### Käytetty laitteisto
+``` 
+Käyttöjärjestelmä: Xubuntu 16.04 LTS 64bit
+cpu: amd fx-8120
+näytönohjain nvidia: geforce gtx 970
+DDR3: 16GB
+```
 
 
 **Tehdään yksinkertainen moduuli joka asentaa apachen ja
