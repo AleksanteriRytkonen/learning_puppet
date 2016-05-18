@@ -24,7 +24,9 @@ Tämän jälkeen voidaankin kyseisessä kansiossa kirjoittaa
 `puppet apply -e 'class{"apache": }'`
 Minkä jälkeen apache asentuu jos se ei ole jo asentunut, käynnistyy ja korvaa
 vakio index.html:n sisällön tekstillä Jeps!
-![ScreenShot](apassiPuppet.png)
+![ScreenShot](/images/apassiPuppet.png)
+
+![ScreenShot](/images/apachevhost.png)
 
 ##Lähteet
 [terokarvinen.com](http://terokarvinen.com/2016/aikataulu-%E2%80%93-linuxin-keskitetty-hallinta-ict4tn011-9-loppukevat-2016#comments)
