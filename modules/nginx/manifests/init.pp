@@ -11,7 +11,7 @@ class nginx {
 		require => Package['nginx'],
 	}
 	file { '/etc/nginx/sites-enabled/default':
-		source => 'puppet:///modules/nginx/kissakuvat.conf',
-		notify => Service['nginx'],
+		ensure => absent,
 	}
+	nginx::vhost {'kotisivu':}
 }
