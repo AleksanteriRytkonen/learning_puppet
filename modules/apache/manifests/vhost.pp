@@ -6,7 +6,7 @@ define apache::vhost ($port, $user, $docroot) {
 	exec { 'dissite':
 		path => [ '/bin', '/usr/bin', '/usr/sbin' ],
 		command => "a2dissite 000-default.conf",
-		refreshonly => true
+		refreshonly => true,
 	}
 	file { "/home/$user/public_html":
 		ensure => 'directory',
@@ -19,7 +19,7 @@ define apache::vhost ($port, $user, $docroot) {
 	}
 	file { "/home/$user/public_html/index.html":
 		ensure => 'file',
-		content => 'Hei maailma\n',
+		content => 'Hei maailma',
 	}
 	exec { 'ensite':
                 path => [ '/bin', '/usr/bin', '/usr/sbin' ],
