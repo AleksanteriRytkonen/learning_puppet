@@ -35,14 +35,14 @@ Tämän jälkeen voidaankin kyseisessä kansiossa kirjoittaa
 `puppet apply -e 'class{"apache": }'`
 Minkä jälkeen apache asentuu jos se ei ole jo asentunut, käynnistyy ja korvaa
 vakio index.html:n sisällön tekstillä Jeps!
-![ScreenShot](/raportit/images/apassiPuppet.png)
+![ScreenShot](/reports/images/apassiPuppet.png)
 
 ##Edit:
 Lisäsin defined typellä virtualhostin apacheen joka löytyy seuraavasta linkistä: [vhostmoduuli](https://github.com/AleksanteriRytkonen/learning_puppet/tree/master/modules/apache)
 Muokkasin myös `/etc/hosts` tiedostoa ja lisäsin sinne seuraavanlaisen rivin
 `10.0.2.15      allu.aleksanterirytkonen.com` ip osoitteena tietysti koneen oma ip.
 Tämän jälkeen korjasin vielä templatessa olleen typon (yksi '>' merkki puuttui) ja alkoi homma pelittää.
-![ScreenShot](/raportit/images/apachevhost.png)
+![ScreenShot](/reports/images/apachevhost.png)
 
 **Dokumenttia päivitetty 18.5.2016**
 

@@ -40,7 +40,7 @@ sudo puppet cert --sign nameofslave
 Picture where is 4 different virtualbox machines, 3 linux and 1 windows, and all of the slaves have gotten something from puppet.
 Notice that even though on windows the computers name is written all uppercase, it needs to be the opposite on puppet manifest so the name 
 needs to be all lowercase.
-![ScreenShot](/raportit/images/master2linux1winslave.png)
+![ScreenShot](/reports/images/master2linux1winslave.png)
 
 #Sources
 [terokarvinen.com](http://terokarvinen.com/2012/puppetmaster-on-ubuntu-12-04)
