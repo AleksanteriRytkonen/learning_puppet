@@ -31,3 +31,5 @@ sudo puppet cert --list
 sudo puppet cert --sign nameofslave
 ```
 
+Sources
+[terokarvinen.com](http://terokarvinen.com/2012/puppetmaster-on-ubuntu-12-04)
