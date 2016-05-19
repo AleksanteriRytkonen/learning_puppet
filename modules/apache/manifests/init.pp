@@ -7,9 +7,9 @@ class apache($port, $user, $docroot) {
                 enable => "true",
         }
 	apache::vhost { 'kotisivu':
-		port => $port,
-		docroot => $docroot,
-		user => $user,
+		port => "$port",
+		docroot => "$docroot",
+		user => "$user",
 		require => Package['apache2'],
 	}
 }
