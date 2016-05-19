@@ -37,6 +37,8 @@ For example on my linux slaves its master.local, but on windows for some odd rea
 sudo puppet cert --list
 sudo puppet cert --sign nameofslave
 ```
+Picture where is 4 different virtualbox machines, 3 linux and 1 windows, and all of the slaves have gotten something from puppet :)
+![ScreenShot](/raportit/images/master2linux1winslave.png)
 
 #Sources
 [terokarvinen.com](http://terokarvinen.com/2012/puppetmaster-on-ubuntu-12-04)
