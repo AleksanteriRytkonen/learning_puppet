@@ -1,0 +1,27 @@
+Ensimmäiseksi päivitetään paketit komennolla sudo apt-get update
+Tämän jälkeen voidaankin asentaa puppet komennolla sudo apt-get install puppet
+Sitten tehdään puppetille oma kansio mihin tulee kaikki moduulit, luodaan
+se komennolla mkdir puppet, siirrytään kyseiseen kansioon cd puppet
+Sitten ajetaan seuraava komento joka luo tarvittavat kansiot ja alikansiot 
+heimaailma moduulille komennolla mkdir -p modules/heimaailma/manifests/
+Siirrytään manifests cansioon ja luodaan init tiedosto komennolla nano/init.pp
+luodaan luokka ja sen täytyy olla saman niminen kuin moduuli eli heimaailma,
+tehdään luokasta seuraavan näköinen 
+
+class heimaailma {
+        file { '/tmp/heimaailmaModule':
+            content => "Hei maailma! Ensimmäinen puppet moduulini.\n"
+        }
+}
+
+tallennetaan ja suljetaan tiedosto komennoilla ctrl+o ctrl+x
+Suoritetaan seuraava komento puppet kansiossa: puppet apply --modulepath modules/ -e 'class {"heimaailma":}'
+luo tiedoston, tässä tapauksessa /tmp/ kansioon, josta voit sitä sitten tutkia.
+
+
+Henkilökohtainen note:
+Selvitä miten laittaa kuvia githubiin.
+
+-Aleksanteri Rytkönen
+Lähteet:
+http://terokarvinen.com/2013/hello-puppet-revisited-%E2%80%93-on-ubuntu-12-04-lts
